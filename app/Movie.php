@@ -19,4 +19,11 @@ class Movie extends Model
     public function comments(){
         return $this->hasMany(Comment::class);
     }
+    public function zanr(){
+        return $this->belongsTo(Zanr::class);
+    } 
+
+    public function getAllMovies(){
+        $movies = Movie::all();
+    }
 }

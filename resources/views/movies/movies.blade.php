@@ -7,7 +7,7 @@
                   @foreach($movies as $movie)
                   <div class="card-body">
                     <div class="title m-b-md"><a href="{{ route('single-movie', [ 'id' => $movie->id]) }}">{{ $movie->title }}</a></div>
-                    <div>{{ $movie->reziser }}</div>
+                    <div class="title m-b-md"><a href="{{ route('single-movie', [ 'id' => $movie->id]) }}">{{ $movie->zanr }}</a></div>
                   </div>
                   @endforeach
                 </div>
