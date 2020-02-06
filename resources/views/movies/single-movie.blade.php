@@ -9,7 +9,7 @@
             <p class="card-text">{{ $movie->zanr }}</p>
             <p class="card-text">{{ $movie->reziser }}</p>
             <p class="card-text">{{ $movie->godina }}</p>
-            <p class="card-text">{{ $movie->stiryline }}</p>
+            <p class="card-text">{{ $movie->storyline }}</p>
         </div>
         <div>
             @if(count($movie->comments))

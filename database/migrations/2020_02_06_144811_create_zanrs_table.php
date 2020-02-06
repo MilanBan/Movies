@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddAutorColumnToCommentTable extends Migration
+class CreateZanrsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class AddAutorColumnToCommentTable extends Migration
      */
     public function up()
     {
-        Schema::table('comments', function (Blueprint $table) {
-            $table->string('autor');
+        Schema::create('zanrs', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('zanr');
+            $table->timestamps();
         });
     }
 
@@ -25,8 +27,6 @@ class AddAutorColumnToCommentTable extends Migration
      */
     public function down()
     {
-        Schema::table('comments', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('zanrs');
     }
 }

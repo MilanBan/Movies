@@ -23,8 +23,8 @@
         <lable for="godina">Godina</lable>
         <input type="text" id="godina" name="godina"/>
 
-        <label for="stiryline">Storyline</label>
-        <textarea type="text" id="stiryline" name="stiryline" cols="30" rows="10"></textarea>
+        <label for="storyline">Storyline</label>
+        <textarea type="text" id="storyline" name="storyline" cols="30" rows="10"></textarea>
 
         <button type="submit">Submit</button>
     </form>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Zanr;
 
 class ZanrController extends Controller
 {
@@ -13,7 +14,7 @@ class ZanrController extends Controller
      */
     public function index()
     {
-        $zanr = Zanr::with('movies')->find($id);        
+        $zanr = Zanr::with('movies')->get();        
         \Log::info($zanr);
         return view('movies.zanr', compact(['zanr']));
     }

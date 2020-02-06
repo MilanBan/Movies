@@ -19,7 +19,12 @@ class CreateMoviesTable extends Migration
             $table->string('zanr');
             $table->string('reziser');
             $table->integer('godina');
-            $table->string('stiryline'); // pogresno napisano ali nije menjano da ne bih izgubio podatke iz baze
+            $table->string('storyline');            // pogresno napisano ali nije menjano da ne bih izgubio podatke iz baze
+            $table->unsignedBigInteger('zanr_id');
+            $table->foreign('zanr_id')
+                ->references('id')
+                ->on('zanrs')
+                ->onDelete('cascade');
             $table->timestamps();
         });
     }
